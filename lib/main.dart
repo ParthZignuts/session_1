@@ -27,8 +27,37 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Container(
             child: Column(
-                  mainAxisAlignment:MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.black45),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          "Git",
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.black45),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          "Command",
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 Text(
                   "Git Commands",
                   style: TextStyle(
@@ -57,7 +86,6 @@ class MyApp extends StatelessWidget {
                       fontWeight: FontWeight.w900,
                       fontSize: 35),
                 ),
-
               ],
             ),
           ),
