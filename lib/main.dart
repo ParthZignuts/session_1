@@ -12,18 +12,53 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.orangeAccent,
         appBar: AppBar(
-          title: Text('Git'),
+          centerTitle: true,
+          title: Text(
+            'Git',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
         ),
         body: Center(
           child: Container(
-            child: Text(
-              "Git Commands",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900,
-                  fontSize: 35),
+            child: Column(
+                  mainAxisAlignment:MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Git Commands",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 35),
+                ),
+                Text(
+                  "git init",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 35),
+                ),
+                Text(
+                  "git commit -m  msg here",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 35),
+                ),
+                Text(
+                  "git push origin master",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 35),
+                ),
+
+              ],
             ),
           ),
         ),
