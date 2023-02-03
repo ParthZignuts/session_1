@@ -8,6 +8,8 @@ class Session2 extends StatefulWidget {
 }
 
 class _Session2State extends State<Session2> {
+  bool likeState = false;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -50,26 +52,23 @@ class _Session2State extends State<Session2> {
                 "A Random Awesome Idea:",
                 style: TextStyle(fontWeight: FontWeight.w900, fontSize: 35),
               ),
-              SizedBox(
-                width: 150,
-                child:ElevatedButton(
-                  onPressed: () => {
-                    print("Button Pressed"),
-                  },
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      LikeButton(),
-                      Text(
-                        "Next",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 20,
-                            color: Colors.black),
-                      ),
-                    ],
-                  ),
+              ElevatedButton.icon(
+                icon: Icon(
+                  Icons.favorite,
+                  color: likeState ? Colors.white : Colors.red,
+                ),
+                onPressed: () => {
+                  setState(() {
+                    likeState = !likeState;
+                  }),
+                  print("Button Pressed"),
+                },
+                label: Text(
+                  "Next",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 20,
+                      color: Colors.black),
                 ),
               ),
             ],
