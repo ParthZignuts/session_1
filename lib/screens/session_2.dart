@@ -12,6 +12,7 @@ class _Session2State extends State<Session2> {
   var names = ['Java', 'Flutter', 'Dart', 'c', 'react', 'js', 'node'];
   var favoriteItems = [];
 
+
   String txtNames = 'c++';
   int counter = 0;
 
@@ -56,7 +57,7 @@ class _Session2State extends State<Session2> {
                 ElevatedButton.icon(
                   icon: Icon(
                     Icons.favorite,
-                    color: likeState ? Colors.white : Colors.red,
+                    color: likeState ? Colors.red : Colors.white,
                   ),
                   onPressed: () => {
                     setState(() {
@@ -79,6 +80,7 @@ class _Session2State extends State<Session2> {
                 ElevatedButton(
                   onPressed: () => {
                     setState(() {
+                      likeState = !likeState;
                       if (counter <= names.length) {
                         txtNames = names[counter];
                       }
@@ -112,12 +114,12 @@ class _Session2State extends State<Session2> {
                 child: Text("No Any Favorite Item Yet"),
               )
             : ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 1,
+                itemCount: favoriteItems.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
-                    child: Text(
-                      favoriteItems.toString(),
+                    child: ListTile(
+                     title: Text(favoriteItems[index]),
+                      leading: Icon(Icons.favorite,color: Colors.red,),
                     ),
                   );
                 }),
