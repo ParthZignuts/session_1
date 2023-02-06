@@ -61,8 +61,14 @@ class _Session2State extends State<Session2> {
                   ),
                   onPressed: () => {
                     setState(() {
+
                       likeState = !likeState;
-                      favoriteItems.add(txtNames);
+                      if(likeState==true && likeState){
+                        favoriteItems.add(txtNames);
+                      }
+                      else{
+                        favoriteItems.remove(txtNames);
+                      }
                     }),
                     print("Button Pressed"),
                   },
@@ -80,7 +86,11 @@ class _Session2State extends State<Session2> {
                 ElevatedButton(
                   onPressed: () => {
                     setState(() {
-                      likeState = !likeState;
+                      if(likeState==true){
+                      likeState = !likeState;}
+                      else{
+                        likeState=likeState;
+                      }
                       if (counter <= names.length) {
                         txtNames = names[counter];
                       }
@@ -102,9 +112,6 @@ class _Session2State extends State<Session2> {
           ],
         ),
       ),
-
-
-
       //this is for Liked Page
       Container(
         alignment: Alignment.center,
