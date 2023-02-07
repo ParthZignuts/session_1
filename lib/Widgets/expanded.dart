@@ -25,24 +25,19 @@ class _CustomExpandedState extends State<CustomExpanded> {
               flex: 2,
               child: Container(
                 color: Colors.green,
-                width: 100,
-                height: 100,
+
               ),
             ),
             Expanded(
               flex: 1,
               child: Container(
-                color: Colors.cyan,
-                width: 100,
-                height: 100,
+                color: Colors.orangeAccent,
               ),
             ),
-            Expanded(
+            Flexible(
               flex: 2,
               child: Container(
                 color: Colors.lime,
-                width: 100,
-                height: 100,
               ),
             ),
           ],
