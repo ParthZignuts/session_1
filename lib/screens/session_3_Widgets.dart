@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:session_1/Widgets/animated_align.dart';
+import 'package:session_1/Widgets/animated_container_widget.dart';
 import 'package:session_1/Widgets/custome_wrap.dart';
 import 'package:session_1/Widgets/first_screen.dart';
 import 'package:session_1/Widgets/linear_progress_indicator.dart';
+import 'package:session_1/Widgets/shared_preference_main.dart';
 import 'package:session_1/Widgets/snackbar_widget.dart';
 import 'package:session_1/Widgets/dialogbox_widget.dart';
 
@@ -24,7 +27,7 @@ class WidgetsDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DialogboxWidget();
+    return SharedPreferenceMain();
 
   }
 }
