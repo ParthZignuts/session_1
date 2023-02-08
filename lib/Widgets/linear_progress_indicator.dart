@@ -4,7 +4,7 @@ class LinearProgressIndcatorWidget extends StatefulWidget {
   const LinearProgressIndcatorWidget({Key? key}) : super(key: key);
 
   @override
-  State<LinearProgressIndcatorWidget> createState() =>
+  State<LinearProgressIndcatorWidget> createState()=>
       _LinearProgressIndcatorWidgetState();
 }
 

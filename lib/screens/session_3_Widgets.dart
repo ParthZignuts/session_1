@@ -3,6 +3,7 @@ import 'package:session_1/Widgets/custome_wrap.dart';
 import 'package:session_1/Widgets/first_screen.dart';
 import 'package:session_1/Widgets/linear_progress_indicator.dart';
 import 'package:session_1/Widgets/snackbar_widget.dart';
+import 'package:session_1/Widgets/dialogbox_widget.dart';
 
 class Session3Widgets extends StatelessWidget {
   const Session3Widgets({Key? key}) : super(key: key);
@@ -10,11 +11,8 @@ class Session3Widgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("Widgets"),
-        ),
         body: WidgetsDemo(),
       ),
     );
@@ -26,7 +24,7 @@ class WidgetsDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LinearProgressIndcatorWidget();
+    return DialogboxWidget();
 
   }
 }
